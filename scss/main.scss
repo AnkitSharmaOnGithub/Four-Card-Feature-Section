@@ -1,6 +1,50 @@
-$color1 : #d93654;
-$color2 : #8dc3f2;
-$color3 : #f2b705;
-$color4 : #f28705;
+@import 'mixins';
+@import 'variables';
 
-$font-family : 'Open Sans', sans-serif;
+*{
+    @include reset-browser-defaults;
+}
+
+body{
+    @include set-default-styles;
+    background-color: #fafafa;
+}
+
+.container{
+    @include flex(column);
+}
+
+header{
+    margin: auto;
+    @include margin-top(4rem);
+    max-width: 600px;
+    text-align: center;
+}
+
+.heading-upper,.heading-lower{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.heading-lower{
+    font-weight: 600;
+}
+
+p{
+    color: $gray;
+    font-size: .9rem;
+}
+
+.cards{
+    @include margin-top(3rem);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4,120px);
+    grid-gap: 1rem
+}
+
+.card{
+    @include card-design();
+    @include rounded(6px);
+    @include grid($columns :repeat(3,1fr));
+}

@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #4c4e61;
+  line-height: 1.7;
+  background-color: #fafafa;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  margin: auto;
+  margin-top: 4rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.heading-upper, .heading-lower {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.heading-lower {
+  font-weight: 600;
+}
+
+p {
+  color: #a3a5ae;
+  font-size: 0.9rem;
+}
+
+.cards {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, 120px);
+  grid-gap: 1rem;
+}
+
+.card {
+  width: 300px;
+  height: 250px;
+  text-align: left;
+  padding: 2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
